@@ -34,6 +34,7 @@ export function* signIn({ payload }) {
       'Falha na autenticação',
       'Houve um erro no login, verifique seus dados'
     );
+    console.tron.log(err);
     yield put(signFailure());
   }
 }
@@ -45,7 +46,6 @@ export function* signUp({ payload }) {
       name,
       email,
       password,
-      provider: true,
     });
 
     // history.push('/');
